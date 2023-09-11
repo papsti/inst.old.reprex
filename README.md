@@ -1,6 +1,6 @@
 # inst.old.reprex
 
-When installing an R package, some folders within `inst` whose names end in "old" get filtered out and are not installed. This issue is not restricted to first-level subdirectories of `inst`.
+When installing an R package, folders within `inst` whose names end in "old" get filtered out and are not installed. This issue is not restricted to first-level subdirectories of `inst`.
 
 For example, in this package we have the following directory strucuture in `inst`:
 
