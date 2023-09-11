@@ -53,4 +53,19 @@ However, the `.Rbuildignore` file (default from `usethis::create_package()`) con
 
 so the missing folders aren't being ignored there.
 
-Why/where are folders ending with "old" getting filtered out during install? I can't find documentation of this feature (bug?) online.
+---
+
+Thanks to @bbolker, I have an answer! From the [Writing R Extensions page](https://cran.r-project.org/doc/manuals/R-exts.html):
+
+> In addition, directories from source control systems[57] or from
+eclipse[58], directories with names check, chm, or ending .Rcheck or Old
+or old and files GNUMakefile[59], Read-and-delete-me or with base names
+starting with ‘.#’, or starting and ending with ‘#’, or ending in ‘~’,
+‘.bak’ or ‘.swp’, are excluded by default[60]
+
+Wonderful!
+
+Note 60:
+
+> see tools:::.hidden_file_exclusions and tools:::get_exclude_patterns()
+for further excluded files and file patterns, respectively.
