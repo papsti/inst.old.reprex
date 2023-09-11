@@ -10,11 +10,12 @@ inst
 |- young-old
 |- models
    |- gold
-   |- old
    |- old-young
-   |- young
-   |- young-old
+   |- old
+   |- older
    |- young-old-young
+   |- young-old
+   |- young
 ```
 If we install the package with 
 
@@ -35,8 +36,8 @@ to list installed package files, we see that only
 models
 |- old-young
 |- older
-|- young
 |- young-old-young
+|- young
 ```
 
 survived the install.
