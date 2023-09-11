@@ -32,19 +32,24 @@ list.files(system.file("models", package = "inst.old.reprex"))
 to list installed package files, we see that only
 
 ```
-|- models
-   |- old-young
-   |- young
-   |- young-old-young
+models
+|- old-young
+|- older
+|- young
+|- young-old-young
 ```
 
 survived the install.
 
-Based on these example directory names, it seems that folders ending with "old" somehow get filtered out. However, the `.Rbuildignore` file (default from `usethis::create_package()`) contains only
+Based on these example directory names, it seems that folders ending with "old" somehow get filtered out. 
+
+However, the `.Rbuildignore` file (default from `usethis::create_package()`) contains only
 
 ```
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ```
+
+so the missing folders aren't being ignored there.
 
 Why/where are folders ending with "old" getting filtered out during install? I can't find documentation of this feature (bug?) online.
